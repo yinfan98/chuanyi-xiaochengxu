@@ -1,0 +1,31 @@
+<!--start.wxml-->
+
+<button class="btn1" bindtap="getDataFromOneNet">
+穿衣有你（穿衣推荐app）</button>
+
+<radio-group class="radio-group" bindchange="radioChange">
+  <label style="display: flex"  wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+
+<input id="input" placeholder="输入您认为适宜的温度" 
+placeholder-style="font-size:12px; color:#FFB90F;" 
+style="font-weight:normal; font-size:15px;font-stretch：semi-condensed； color:#F0FFF0; padding-left: 27rpx"
+  bindinput="change"/>
+
+<text id="text">提示：当目前温度过高时，提醒您应更换衣物。单位：摄氏度</text>
+<button id="btn3" style="opacity: {{opacity}}" 
+disabled="{{disabled}}" bindtap="send">温度情况</button>
+
+<button id="btn5"  bindtap="changeToTest">推出介绍</button>
+
+
+   <view class="page">
+
+<view>
+   <button id="clickMe"  type="primary" size="mini" bindtap="clickMe">推荐店铺</button>
+</view>
+
+
+</view>
